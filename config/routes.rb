@@ -6,7 +6,10 @@ Rails.application.routes.draw do
       get "posts/latest" => "posts#latest"
       get "posts/search" => "posts#search"
       resources :posts
+
     end
   end
+  
+  root "posts#index"
   
 end
