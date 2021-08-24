@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def latest
-    @posts = Post.order(created_at: :desc).first(6)
+    @posts = Post.order(created_at: :desc)
     render status: 200, json: { posts: @posts }
   end
 
