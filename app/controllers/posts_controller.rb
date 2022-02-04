@@ -26,8 +26,7 @@ class PostsController < ApplicationController
     @id = params[:id]
     @post = Post.find(@id)
     if @post != nil
-      @post.like += 1
-      @post.save
+      @post.update(like: @post.like + 1)
       render status: 200, json: { posts: @post }
     else
       response_bad_request
