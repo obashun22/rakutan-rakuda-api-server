@@ -22,6 +22,18 @@ class PostsController < ApplicationController
     render status: 200, json: { posts: @posts }
   end
 
+  def like
+    @id = params[:id]
+    @post = Post.find(@id)
+    if @post != nil
+      @post.like += 1
+      @post.save
+      render status: 200, json: { posts: @post }
+    else
+      response_bad_request
+    end
+  end
+
   def create
     @posts = Post.new(
       lecture: params[:lecture],
@@ -32,6 +44,7 @@ class PostsController < ApplicationController
       evaluation: params[:evaluation],
       cause: params[:cause],
       comment: params[:comment],
+      like: 0,
     )
     if @posts.save
       response_success(:post, :create)

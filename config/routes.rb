@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     scope 'v1' do
       get "posts/latest" => "posts#latest"
       get "posts/search" => "posts#search"
+      get "posts/:id/like" => "posts#like"
       resources :posts
 
     end
