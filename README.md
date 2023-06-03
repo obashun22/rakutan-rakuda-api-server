@@ -1,25 +1,2 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+# 落単らくだ API Server
+落単らくだのAPIサーバです。[落単らくだ](https://rakutan-rakuda.netlify.app/)は落単した人の授業レビューを見ることができるサイトです。[楽単らくだ](https://www.rakutan-rakuda.com/)のパロディです。
